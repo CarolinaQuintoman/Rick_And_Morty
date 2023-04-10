@@ -1,0 +1,16 @@
+.container{
+    border-radius: 1px;
+    box-shadow: none;
+}
+.button {
+ color:rgb(76, 75, 75)
+}
+
+.h2{
+    font-size: 15px;
+    color:rgb(132, 75, 5)
+}
+.img{
+    width: 50%;
+    height: 50%;
+}

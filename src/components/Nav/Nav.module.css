@@ -1,0 +1,16 @@
+.container {
+    background-color:  #213a5c;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.navbar {
+    
+    position: relative;
+    overflow: visible;
+}
+.logOut{
+    color: antiquewhite;
+    margin-right: 5px;
+}
