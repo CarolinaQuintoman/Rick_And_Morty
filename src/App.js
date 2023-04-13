@@ -7,6 +7,7 @@ import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form.jsx';
 //import Error404 from './components/Error404/Error404.jsx';
+import Favorites from './components/Favorites/Favorites.jsx';
 
 const URL_BASE = 'http://be-a-rym.up.railway.app/api/character';
 const API_KEY = '97d67353799d.b43696302e658f63bccb';
@@ -49,7 +50,7 @@ function App() {
    }
    const onClose = (id) => {
       const charactersFilter = characters.filter(characters =>
-         characters.id !== Number(id))
+         characters.id !== id)
          setCharacters(charactersFilter)
    }
    return (
@@ -64,6 +65,7 @@ function App() {
             <Route path='/Home' element={<Cards characters={characters}  onClose={onClose}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
+            <Route path='/favorite' element={<Favorites/>} />
 
             {/* <Route path='*' element={<Error404/>}/> */}
          </Routes>

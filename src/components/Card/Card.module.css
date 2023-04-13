@@ -1,6 +1,13 @@
 .container{
     border-radius: 1px;
     box-shadow: none;
+    background-color: rgb(153, 153, 155);
+    width: 350px;
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+    flex-direction: column;
+    
 }
 .button {
  color:rgb(76, 75, 75)

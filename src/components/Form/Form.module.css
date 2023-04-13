@@ -3,7 +3,8 @@
    
 }
 body {
-    background-image: url('../../assets/61de2ba956418acd9ab454ceca15bbb2.jpg');
+    /* background-image: url('../../assets/61de2ba956418acd9ab454ceca15bbb2.jpg'); */
+    background-color: rgb(27, 27, 66);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

@@ -1,10 +1,44 @@
 import style from '../Card/Card.module.css';
 import {Link} from 'react-router-dom';
+import { addFav, removeFav } from '../../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 
 
 export default function Card({id,status,name, species, gender,origin,image,onClose}) {
+   const dispatch = useDispatch();
+   const myFavorites= useSelector( state => state.myFavorites);
+
+   const [ isFav, setIsFav] = useState(false);
+
+   const handleFavorite = () => {
+      if(isFav){
+         setIsFav(false)
+         dispatch(removeFav(id))
+      }
+      else {
+         setIsFav(true);
+         dispatch(addFav({id,status,name, species, gender,origin,image,onClose}))
+      }
+   }
+
+   useEffect(() => {
+      myFavorites.forEach((fav) => {
+         if (fav.id === id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
+
    return ( 
       <div className = {style.container}>
+         {
+            isFav ? (
+            <button onClick={handleFavorite}>❤️</button>
+            ) : (
+            <button onClick={handleFavorite}>🤍</button>
+            )
+         }
          <button className={style.button} onClick={() => onClose(id)}>X</button>
          
          <Link to={`/detail/${id}`}>
@@ -19,3 +53,11 @@ export default function Card({id,status,name, species, gender,origin,image,onClo
       </div>
    );
 }
+
+// export function mapDispatchToProps(dispatch) {
+//    return{
+//       addFav: () => { dispatch(addFav())},
+//       removeFav: (id) =>{ dispatch(removeFav(id))}
+//    }
+// } Componente de clases 
+

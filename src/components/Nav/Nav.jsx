@@ -2,6 +2,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import {Link , NavLink} from 'react-router-dom';
 import style from './Nav.module.css'
 
+
 const Nav = ({onSearch}) => {
     return (
 
@@ -15,7 +16,7 @@ const Nav = ({onSearch}) => {
             </button>
            
             <NavLink className={style.logOut} to='/home'>LOGOUT</NavLink>
-            
+            <NavLink className={style.logOut} to='/favorite'>FAVORITE</NavLink>
         </nav>
     )
 }
