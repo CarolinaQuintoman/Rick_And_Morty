@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+   
+}
+body {
+    /* background-image: url('../../assets/61de2ba956418acd9ab454ceca15bbb2.jpg'); */
+    background-color: rgb(27, 27, 66);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+.login{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.label{
+    color: antiquewhite;
+    font-size: 15px;
+    font-family: 'Trebuchet MS';
+    margin-top: 35px;
+}
+.button{
+    margin-top: 25px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    box-shadow: 5px 0px 5px rgb(241, 241, 122) ;
+    background-color: rgb(241, 241, 122);
+    size: 305px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';
+}
+.input{
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
