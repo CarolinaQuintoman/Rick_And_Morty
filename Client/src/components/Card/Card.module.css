@@ -1,12 +1,13 @@
 .container{
-    border-radius: 1px;
+    border-radius: 5px;
     box-shadow: none;
     background-color: rgb(153, 153, 155);
-    width: 350px;
+    width: 300px;
     display: flex;
     /* justify-content: ; */
     align-items: center;
     flex-direction: column;
+    margin: 5px 5px;
     
 }
 .button {
@@ -16,6 +17,10 @@
 .h2{
     font-size: 15px;
     color:rgb(132, 75, 5)
+}
+.h3{
+    font-size: 10px;
+    color:rgb(90, 51, 4)
 }
 .img{
     width: 50%;

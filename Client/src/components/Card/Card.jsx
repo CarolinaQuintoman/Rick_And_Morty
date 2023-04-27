@@ -45,10 +45,10 @@ export default function Card({id,status,name, species, gender,origin,image,onClo
             <h2 className={style.h2}>{name}</h2>
          </Link>
          
-         <h2>{status}</h2>
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
-         <h2>{origin}</h2>
+         <h3 className={style.h3}>{status}</h3>
+         <h3 className={style.h3}>{species}</h3>
+         <h3 className={style.h3}>{gender}</h3>
+         <h3 className={style.h3}>{origin}</h3>
          <img src={image} alt='' />
       </div>
    );

@@ -11,4 +11,4 @@ const login = (req, res) =>{
         : res.status(200).json({ access : false})
     }
 }
-module.exports = login;
+module.exports = {login};

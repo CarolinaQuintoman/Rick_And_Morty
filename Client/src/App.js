@@ -9,6 +9,7 @@ import Form from './components/Form/Form.jsx';
 //import Error404 from './components/Error404/Error404.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
 
+const URL = 'http://localhost:3001/rickandmorty/login/';
 //const URL_BASE = 'http://be-a-rym.up.railway.app/api/character';
 //const API_KEY = '97d67353799d.b43696302e658f63bccb';
 
@@ -22,14 +23,18 @@ function App() {
    //const EMAIL = "caroquinto@gmail.com";
    //const PASSWORD = "krisCaro33"
 
-   function login(userData) { //conectando con backEnd
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+   const login = async (userData) => { //conectando con backEnd
+      try {
+         const { email, password } = userData;
+         const { data } = await axios(URL + `?email=${email}&password=${password}`);
          const { access } = data;
-         setAccess(data);
+               
+         setAccess(access);
          access && navigate('/home');
-      });
+      
+   } catch (error){
+      console.log(error.message);
+   }
    }
 
    useEffect(() => {
@@ -38,16 +43,18 @@ function App() {
       
    const { pathname } = useLocation();
    //axios(`${URL_BASE}/${id}?key=${API_KEY}`)
-   const onSearch = (id) => {
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(response => response.data)
-      .then(( data ) => {
+
+   const onSearch = async (id) => {
+      try{
+         const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      });
+         } 
+         
+      } catch(error){
+          alert('¡No hay personajes con este ID!');
+   }
    }
    const onClose = (id) => {
       const charactersFilter = characters.filter(characters =>
