@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS';
+} 
+h1{
+    text-align: center;
+    color: rgb(219, 196, 18);
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS';
+}
+.box{
+    border: 2px solid rgb(109, 113, 63);
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+    color:rgb(211, 166, 111);
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS';
+}
+/* .img{
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+} */
+img{
+    width: 100%;
+    display: block;
+    /* transition: all .5s ease-in-out 0s; */
+}
+/* .box .boxImg {
+    transform: rotateY('0deg');
+} */
+/* .box:hover .boxImg img {
+ transform: rotateY('-90deg');
+} */
+/* .box .boxText{
+    position: absolute;
+    height: 100%;
+    color: rgb(240, 240, 25);
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 10px;
+    transform: rotateY(90deg);
+    transition: all .5s ease-in-out 0s;
+}
+.box:hover .boxText{
+    transform: rotateY('0deg');
+} */

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from './Form.module.css';
+import imageRick from '../../assets/61de2ba956418acd9ab454ceca15bbb2.jpg'
 
 import validation from "./Validation.js";
 
@@ -31,7 +32,14 @@ const handleSubmit = (event) =>{
 }
 
     return (
-        <div>
+        <>
+        
+        <div className={style.container}>
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src={imageRick}
+          class={style.img} alt="Rick and Morty"/>
+            </div>
+            
             <form  onSubmit={handleSubmit} className={style.login}>
                 <label htmlFor="email" className={style.label}>Email</label>
                     <input className={style.input} onChange={handleChange} value={userData.email} name="email" type="email" placeholder="ingrese su email"/>
@@ -44,7 +52,9 @@ const handleSubmit = (event) =>{
 
                 <button className={style.button}>Submint</button>
             </form>
+            
         </div>
+        </>
     )
 }
 export default Form;
